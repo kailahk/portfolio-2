@@ -1,4 +1,230 @@
+@font-face {
+    font-family: tanMerengue-black;
+    src: url(./fonts/TAN\ -\ MERINGUE.woff);
+}
+
+@font-face {
+    font-family: glacialIndifference-black;
+    src: url(./fonts/GlacialIndifference-Regular.otf);
+}
+
 html {
     background-color: #FDFAF0;
     color: #D14D44;
 }
+
+body {
+    padding: 0 10vmin;
+    box-sizing: border-box;
+}
+
+.landing-section {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 5%;
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 10%;
+    grid-template-rows: 20% 10% 50% 10% 10%;
+}
+
+.kk-img>img {
+    width: 100%;
+    height: auto;
+}
+
+div.circle {
+    position: absolute;
+    margin-left: -40vmin;
+    margin-top: -50vmin;
+    height: 120vmin;
+    width: 120vmin;
+    border: .2vmin solid #D14D44;
+    border-radius: 50%;
+}
+
+.kk-img {
+    display: inline-block;
+    position: relative;
+    width: 30vmin;
+    height: 30vmin;
+    overflow: hidden;
+    border-radius: 50%;
+    grid-column: 9;
+    grid-row: 2;
+    z-index: -2;
+    margin-right: 3vmin;
+}
+
+h1 {
+    font-family: tanMerengue-black;
+    font-size: 14vmin;
+    margin-top: -8vmin;
+}
+
+h3 {
+    font-family: glacialIndifference-black;
+    letter-spacing: .1vmin;
+    font-size: 5vmin;
+    font-weight: lighter;
+    margin: 0;
+    margin-top: -12vmin
+}
+
+.footer-1 {
+    position: fixed;
+    top: 96vh;
+    left: 45vw;
+}
+
+
+.footer-1>a>img {
+    height: 3vmin;
+    width: auto;
+    padding: 0 .25vmin;
+}
+
+.pronouns {
+    grid-column: 3;
+    grid-row: 3;
+    font-weight: lighter;
+    font-size: 4vmin;
+    z-index: 4;
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin-right: -7vmin
+}
+
+.abstract {
+    height: 22vmin;
+    width: auto;
+    margin: 0 auto;
+    grid-column: 3;
+    grid-row: 3;
+    align-self: center;
+    margin-top: 16vmin;
+}
+
+.hiking {
+    grid-row: 3;
+    grid-column: 3;
+    z-index: 2;
+}
+
+.name-and-occupation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: 1 / 10;
+    grid-row: 3;
+}
+
+.about-title,
+.project-title {
+    width: 10vmin;
+    height: 2.5vmin;
+    font-size: 2vmin;
+    font-family: glacialIndifference-black;
+    border: .2vmin solid #D14D44;
+    border-radius: 10vmin;
+    text-align: center;
+    padding: 1vmin;
+    letter-spacing: .1vmin;
+}
+
+.about-title {
+    grid-row: 2;
+}
+
+.about-section>.copy {
+    font-family: glacialIndifference-black;
+    letter-spacing: .1vmin;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    margin-top: 2vmin;
+    width: 90vmin;
+    padding-right: 5vmin;
+    font-size: 2vmin;
+}
+
+.project-section {
+    grid-row: 4;
+    grid-column: 1 / 5;
+    margin-bottom: 10vmin;
+}
+
+.projects>div>a>img {
+    height: 14vmin;
+    padding: 6vmin 3vmin 2vmin 0vmin;
+    justify-self: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20vmin;
+}
+
+.github-logo {
+    height: 3vmin;
+    width: auto;
+    margin-bottom: -1vmin;
+    padding-left: 1vmin;
+}
+
+div.project-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 21vmin;
+    padding: 0 .5vmin;
+}
+
+.project-info>div>div>a,
+.project-info>div>p {
+    visibility: visible;
+    font-family: glacialIndifference-black;
+    letter-spacing: .1vmin;
+    font-size: 2vmin;
+}
+
+.project-info>div>p {
+    margin-bottom: .5vmin;
+}
+
+.project-info>div {
+    border-left: .2vmin solid #D14D44;
+    padding-left: 2vmin;
+    width: 20vmin;
+    display: none;
+}
+
+.bucket-lister {
+    height: 18vmin !important;
+}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 22vmin;
+    z-index: 1;
+  }
+  
+  .dropdown-content div a {
+    color: #D14D44;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {display: block;}
