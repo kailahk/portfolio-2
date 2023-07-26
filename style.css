@@ -14,21 +14,22 @@ html {
 }
 
 body {
-    padding: 0 10vmin;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .landing-section {
     display: grid;
     height: 100vh;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr 5%;
+    grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 10%;
 }
 
 .about-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 10%;
-    grid-template-rows: 20% 10% 50% 10% 10%;
+    grid-template-columns: 1fr 1fr 10%;
+    grid-template-rows: 10% 10% 40% 10% 20%;
+    margin-left: 8vmin;
 }
 
 .kk-img>img {
@@ -44,6 +45,7 @@ div.circle {
     width: 120vmin;
     border: .2vmin solid #D14D44;
     border-radius: 50%;
+    z-index: -2
 }
 
 .kk-img {
@@ -57,12 +59,14 @@ div.circle {
     grid-row: 2;
     z-index: -2;
     margin-right: 3vmin;
+    background-color: #ffc1b1;
 }
 
 h1 {
     font-family: tanMerengue-black;
     font-size: 14vmin;
     margin-top: -8vmin;
+    font-weight: lighter;
 }
 
 h3 {
@@ -88,29 +92,30 @@ h3 {
 }
 
 .pronouns {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 3;
+    font-family: tanMerengue-black;
     font-weight: lighter;
-    font-size: 4vmin;
+    font-size: 2.5vmin;
     z-index: 4;
     align-self: flex-start;
-    justify-self: flex-end;
-    margin-right: -7vmin
+    justify-self: center;
+    margin-right: -15vmin;
 }
 
 .abstract {
     height: 22vmin;
     width: auto;
     margin: 0 auto;
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 3;
     align-self: center;
-    margin-top: 16vmin;
+    margin-top: 10vmin;
 }
 
 .hiking {
     grid-row: 3;
-    grid-column: 3;
+    grid-column: 2;
     z-index: 2;
 }
 
@@ -123,7 +128,8 @@ h3 {
 }
 
 .about-title,
-.project-title {
+.project-title,
+.resume-title {
     width: 10vmin;
     height: 2.5vmin;
     font-size: 2vmin;
@@ -145,9 +151,9 @@ h3 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     margin-top: 2vmin;
-    width: 90vmin;
-    padding-right: 5vmin;
+    width: 82vmin;
     font-size: 2vmin;
+    padding-right: 4vmin;
 }
 
 .project-section {
@@ -166,7 +172,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20vmin;
+    padding-bottom: 18vmin;
 }
 
 .github-logo {
@@ -193,10 +199,6 @@ div.project-info {
     font-size: 2vmin;
 }
 
-.project-info>div>p {
-    margin-bottom: .5vmin;
-}
-
 .project-info>div {
     border-left: .2vmin solid #D14D44;
     padding-left: 2vmin;
@@ -207,24 +209,170 @@ div.project-info {
 .bucket-lister {
     height: 18vmin !important;
 }
-  
-  .dropdown {
+
+.sudoku {
+    height: 13vmin !important;
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    top: 22vmin;
+    top: 23vmin;
     z-index: 1;
-  }
-  
-  .dropdown-content div a {
+}
+
+.dropdown-content div a {
     color: #D14D44;
     font-weight: bold;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {display: block;}
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.ally {
+    display: flex;
+}
+
+.squarespace-logo {
+    height: 2vmin;
+    padding: 0 0 0 .5vmin;
+    margin-bottom: -.5vmin
+}
+
+.resume-section {
+    grid-row: 9;
+    margin-top: 20vmin;
+}
+
+.resume-section > a {
+    text-decoration: none;
+    color: #D14D44;
+}
+
+@media (max-width: 767px) {
+    .landing-section {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 10% 1fr 10%;
+    }
+    h1 {
+        white-space: normal;
+    }
+    .name-and-occupation {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-column: 1 / 10;
+    }
+    .kk-img {
+        grid-column: 2;
+        justify-self: flex-end;
+        grid-row: 3;
+        margin-right: -3vmin;
+    }
+    .about-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2% 1fr 12%;
+    }
+    .about-title {
+        grid-row: 1;
+        align-items: center;
+        justify-self: center;
+        margin-left: -8vmin;
+        font-size: 8vmin;
+        width: 30vmin;
+        height: 10vmin;
+        margin-top: 0;
+    }
+    .about-section>.copy {
+        grid-row: 2;
+        font-size: 3vmin;
+        margin-top: 6vmin;
+        margin-bottom: 4vmin;
+    }
+    .abstract, .hiking, .pronouns {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .abstract {
+        margin: 0 auto;
+        grid-row: 3;
+        margin-top: 14vmin;
+    }
+    .project-section {
+        grid-row: 6
+    }
+    .hiking {
+        margin-right: 40vmin;
+        grid-row: 3;
+    }
+    .pronouns {
+        margin-left: 15vmin;
+        grid-row: 3;
+        margin-top: 10vmin;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0;
+        margin-top: 4vmin;
+    }
+    .project-title {
+        margin: 0 auto;
+        margin-top: 5vmin;
+        margin-left: 24vmin;
+        font-size: 8vmin;
+        width: 33vmin;
+        height: 11vmin;
+    }
+    .projects>div>a>img {
+        height: 23vmin;
+        padding: 4vmin;
+    }
+    .project-info {
+        display: grid !important;
+        margin-left: -30vmin;
+    }
+    .project-info>div {
+        display: flex;
+    }
+    div.dropdown-content {
+        width: 30vmin;
+        display: flex;
+        flex-direction: column;
+        grid-row:1;
+        grid-column: 2;
+        margin-top: -10vmin;
+    }
+    .bucket-lister {
+        height: 26vmin !important;
+        padding: 0 2vmin !important
+    }
+    
+    .sudoku {
+        height: 18vmin !important;
+        margin-top: 4vmin;
+        margin-left: 4vmin;
+    }
+    .resume-section {
+        justify-self: center;
+        margin-left: -7vmin;
+        margin-bottom: 15vmin;
+        margin-top: 0vmin;
+    }
+    .resume-title {
+        font-size: 8vmin;
+        width: 30vmin;
+        height: 10vmin;
+        margin-top: 0;
+    }
+}
