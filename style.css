@@ -13,6 +13,11 @@ html {
     color: #D14D44;
 }
 
+a {
+    color: #D14D44;
+    text-decoration: none;
+}
+
 body {
     padding: 0;
     box-sizing: border-box;
@@ -139,6 +144,7 @@ h3 {
     text-align: center;
     padding: 1vmin;
     letter-spacing: .1vmin;
+    font-weight: bolder;
 }
 
 .about-title {
@@ -247,6 +253,11 @@ div.project-info {
     margin-bottom: -.5vmin
 }
 
+.shopify-logo {
+    height: 3.5vmin;
+    margin-bottom: -1vmin
+}
+
 .resume-section {
     grid-row: 9;
     margin-top: 20vmin;
@@ -329,10 +340,10 @@ div.project-info {
     .project-title {
         margin: 0 auto;
         margin-top: 5vmin;
-        margin-left: 24vmin;
         font-size: 8vmin;
         width: 33vmin;
         height: 11vmin;
+        padding: .5vmin 2vmin;
     }
     .projects>div>a>img {
         height: 23vmin;
